@@ -1,10 +1,12 @@
 baseURL = "https://profile.org/"
 title = "田中 美帆｜大阪大学医学系研究科保健学専攻"
-[pagination]
- pagerSize = 10
+
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
+
+[pagination]
+ pagerSize = 10
 
 [module]
   [[module.imports]]
@@ -19,15 +21,29 @@ hasCJKLanguage = true
   ShowBreadCrumbs = true
   defaultTheme = "auto"
 
+[[params.socialIcons]]
+  name = "instagram"
+  url  = "https://www.instagram.com/m91office/"
+[[params.socialIcons]]
+  name = "facebook"
+  url  = "https://www.facebook.com/miho.phn"
+[[params.socialIcons]]
+  name = "orcid"
+  url  = "https://orcid.org/0009-0006-6039-9625"
+
 [languages]
 
   [languages.ja]
-    languageName = "ja"
+    languageName = "日本語"
     weight = 1
     contentDir = "content/ja"
+ 
     [languages.ja.params.homeInfoParams]
-      Title = "田中 美帆"
-      Content = "田中美帆のホームページ｜個人の研究・教育・社会貢献活動について公表"
+      Title   = "田中美帆"
+      Content = """大阪大学医学系研究科保健学専攻　助教  
+    Researchmap：https://researchmap.jp/miho_1991  
+    J-GLOBAL ID：202001017457190707"""
+   
     [languages.ja.menu]
       [[languages.ja.menu.main]]
         name = "プロフィール"
