@@ -59,7 +59,7 @@ hasCJKLanguage = true
         url = "/research/"
         weight = 2
       [[languages.ja.menu.main]]
-        name = "業績"
+        name = "論文"
         url = "/publications/"
         weight = 3
       [[languages.ja.menu.main]]
