@@ -1,0 +1,88 @@
+backend:
+  name: github
+  repo: yourname/yourrepo   # ← GitHub リポジトリに変更
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+locale: "ja"
+i18n:
+  structure: multiple_folders
+
+collections:
+  - name: "news_ja"
+    label: "ニュース（日本語）"
+    folder: "content/ja/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "日付", name: "date", widget: "datetime" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - name: "news_en"
+    label: "News (English)"
+    folder: "content/en/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages_ja"
+    label: "固定ページ（日本語）"
+    files:
+      - label: "プロフィール"
+        name: "about_ja"
+        file: "content/ja/about/index.md"
+        fields:
+          - { label: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - label: "研究"
+        name: "research_ja"
+        file: "content/ja/research/index.md"
+        fields:
+          - { label: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - label: "論文"
+        name: "publications_ja"
+        file: "content/ja/publications/index.md"
+        fields:
+          - { label: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - label: "連絡先"
+        name: "contact_ja"
+        file: "content/ja/contact/index.md"
+        fields:
+          - { label: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+
+  - name: "pages_en"
+    label: "Pages (English)"
+    files:
+      - label: "About"
+        name: "about_en"
+        file: "content/en/about/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Research"
+        name: "research_en"
+        file: "content/en/research/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Publications"
+        name: "publications_en"
+        file: "content/en/publications/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact_en"
+        file: "content/en/contact/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

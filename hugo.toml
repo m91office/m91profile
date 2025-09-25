@@ -1,0 +1,79 @@
+baseURL = "https://example.org/"
+title = "田中 美帆｜大阪大学医学系研究科保健学専攻"
+paginate = 10
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+
+[params]
+  env = "production"
+  description = "大阪大学医学系研究科保健学専攻｜公衆衛生看護｜研究者プロフィール、研究、論文、ニュース"
+  author = "田中 美帆"
+  ShowShareButtons = false
+  ShowReadingTime = false
+  ShowBreadCrumbs = true
+  defaultTheme = "auto"
+
+[languages]
+
+  [languages.ja]
+    languageName = "ja"
+    weight = 1
+    contentDir = "content/ja"
+    [languages.ja.params.homeInfoParams]
+      Title = "田中 美帆"
+      Content = "田中美帆のホームページ｜個人の研究・教育・社会貢献活動について公表"
+    [languages.ja.menu]
+      [[languages.ja.menu.main]]
+        name = "プロフィール"
+        url = "/about/"
+        weight = 1
+      [[languages.ja.menu.main]]
+        name = "研究"
+        url = "/research/"
+        weight = 2
+      [[languages.ja.menu.main]]
+        name = "業績"
+        url = "/publications/"
+        weight = 3
+      [[languages.ja.menu.main]]
+        name = "ニュース"
+        url = "/news/"
+        weight = 4
+      [[languages.ja.menu.main]]
+        name = "連絡先"
+        url = "/contact/"
+        weight = 5
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en"
+    [languages.en.params.homeInfoParams]
+      Title = "Miho Tanaka"
+      Content = "Osaka University — Division of Health Sciences | Maternal & Child Health • Parentality • Primary Prevention"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "About"
+        url = "/about/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Research"
+        url = "/research/"
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Publications"
+        url = "/publications/"
+        weight = 3
+      [[languages.en.menu.main]]
+        name = "News"
+        url = "/news/"
+        weight = 4
+      [[languages.en.menu.main]]
+        name = "Contact"
+        url = "/contact/"
+        weight = 5
