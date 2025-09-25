@@ -21,6 +21,11 @@ hasCJKLanguage = true
   ShowBreadCrumbs = true
   defaultTheme = "auto"
 
+[params.label]
+  text = "Miho Tanaka"
+  icon = "/uploads/portrait.jpg"
+  iconHeight = 34
+
 [[params.socialIcons]]
   name = "instagram"
   url  = "https://www.instagram.com/m91office/"
