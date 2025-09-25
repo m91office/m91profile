@@ -2,7 +2,7 @@
 title: "プロフィール"
 summary: "田中美帆"
 description: "研究歴"
-date: 2025-09-23
+date: 2025-09-25
 ---
 
 ### 田中 美帆
