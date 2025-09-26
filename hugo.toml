@@ -26,6 +26,12 @@ hasCJKLanguage = true
   icon = "/uploads/portrait.jpg"
   iconHeight = 34
 
+[params.banner]
+image = "/uploads/researchmap130.gif"  
+url   = "https://researchmap.jp/miho_1991" 
+alt   = "researchmap"           
+position = "before"  
+
 [[params.socialIcons]]
   name = "instagram"
   url  = "https://www.instagram.com/m91office/"
