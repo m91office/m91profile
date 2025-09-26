@@ -1,29 +1,33 @@
-{{/* social_icons.html */}}
-{{- $banner := $.Site.Params.banner -}}
-
-{{- $pos := "after" -}}
-{{- with $banner }}{{ with .position }}{{ $pos = . }}{{ end }}{{ end -}}
+{{/* social_icons.html – robust & adblock-safe */}}
+{{- $b := $.Site.Params.banner -}}
 
 <div class="social-icons" {{ with .align }}align="{{ . }}"{{ end }}>
-  {{- if and $banner (eq $pos "before") -}}
-    <a class="banner" href="{{ $banner.url | safeURL }}" target="_blank" rel="noopener"
-       aria-label="{{ $banner.alt }}">
-      <img src="{{ $banner.image | relURL }}" alt="{{ $banner.alt }}" loading="lazy">
-    </a>
-  {{- end -}}
+  {{/* === バナー（前） === */}}
+  {{ with $b }}
+    {{ if eq (.position | default "after") "before" }}
+      <a class="profile-badge" href="{{ .url | safeURL }}" target="_blank" rel="noopener"
+         aria-label="{{ .alt }}">
+        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
+      </a>
+    {{ end }}
+  {{ end }}
 
-  {{- range site.Params.socialIcons -}}
-    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="me noopener noreferrer"
+  {{/* === SNS アイコン === */}}
+  {{ range site.Params.socialIcons }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank"
+       rel="me noopener noreferrer"
        title="{{ (.title | default .name) | title }}">
-      {{- /* ← ここを .name ではなく . を渡すのがポイント */ -}}
-      {{- partial "svg.html" . -}}
+      {{ partial "svg.html" . }}
     </a>
-  {{- end -}}
+  {{ end }}
 
-  {{- if and $banner (ne $pos "before") -}}
-    <a class="banner" href="{{ $banner.url | safeURL }}" target="_blank" rel="noopener"
-       aria-label="{{ $banner.alt }}">
-      <img src="{{ $banner.image | relURL }}" alt="{{ $banner.alt }}" loading="lazy">
-    </a>
-  {{- end -}}
+  {{/* === バナー（後） === */}}
+  {{ with $b }}
+    {{ if ne (.position | default "after") "before" }}
+      <a class="profile-badge" href="{{ .url | safeURL }}" target="_blank" rel="noopener"
+         aria-label="{{ .alt }}">
+        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
+      </a>
+    {{ end }}
+  {{ end }}
 </div>
