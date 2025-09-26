@@ -1,0 +1,18 @@
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: .8rem;      
+  flex-wrap: wrap;  
+}
+
+.social-icons a.banner img {
+  height: 28px;    
+  width: auto;
+  vertical-align: middle;
+  border-radius: 4px;   
+}
+
+/* 横幅に余裕がある時は少し大きめでもOK */
+@media (min-width: 640px) {
+  .social-icons a.banner img { height: 32px; }
+}
