@@ -1,10 +1,8 @@
-{{/* social_icons.html  */}}
+{{/* social_icons.html */}}
 {{- $banner := $.Site.Params.banner -}}
 
 {{- $pos := "after" -}}
-{{- with $banner -}}
-  {{- with .position }}{{ $pos = . }}{{ end -}}
-{{- end -}}
+{{- with $banner }}{{ with .position }}{{ $pos = . }}{{ end }}{{ end -}}
 
 <div class="social-icons" {{ with .align }}align="{{ . }}"{{ end }}>
   {{- if and $banner (eq $pos "before") -}}
@@ -15,9 +13,10 @@
   {{- end -}}
 
   {{- range site.Params.socialIcons -}}
-    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="me noopener noreferrer"
        title="{{ (.title | default .name) | title }}">
-      {{- partial "svg.html" .name -}}
+      {{- /* ← ここを .name ではなく . を渡すのがポイント */ -}}
+      {{- partial "svg.html" . -}}
     </a>
   {{- end -}}
 
