@@ -1,0 +1,27 @@
+{{- $icons := site.Params.socialIcons -}}
+{{- $banner := site.Params.banner -}}
+
+{{ if or $icons $banner }}
+<div class="social-icons">
+  {{- if and $banner (eq ($banner.position | default "after") "before") -}}
+    <a class="banner" href="{{ $banner.url }}" target="_blank" rel="noopener"
+       aria-label="{{ $banner.alt }}">
+      <img src="{{ $banner.image | relURL }}" alt="{{ $banner.alt }}" loading="lazy">
+    </a>
+  {{- end -}}
+
+  {{- range $icons -}}
+    <a href="{{ .url }}" target="_blank" rel="me noopener noreferrer"
+       title="{{ .title | default .name }}">
+      {{- partial "svg.html" .name -}}
+    </a>
+  {{- end -}}
+
+  {{- if and $banner (ne ($banner.position | default "after") "before") -}}
+    <a class="banner" href="{{ $banner.url }}" target="_blank" rel="noopener"
+       aria-label="{{ $banner.alt }}">
+      <img src="{{ $banner.image | relURL }}" alt="{{ $banner.alt }}" loading="lazy">
+    </a>
+  {{- end -}}
+</div>
+{{- end }}
