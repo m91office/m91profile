@@ -1,20 +1,14 @@
-<!-- DEBUG: social_icons partial loaded -->
+{{/* social icons partial (override) */}}
+{{- $b := site.Params.banner -}}
 
-{{/* social_icons.html – robust & adblock-safe */}}
-{{- $b := $.Site.Params.banner -}}
-
-<div class="social-icons" {{ with .align }}align="{{ . }}"{{ end }}>
-  {{/* === バナー（前） === */}}
-  {{ with $b }}
-    {{ if eq (.position | default "after") "before" }}
-      <a class="profile-badge" href="{{ .url | safeURL }}" target="_blank" rel="noopener"
-         aria-label="{{ .alt }}">
-        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
-      </a>
-    {{ end }}
+<div class="social-icons" data-debug="custom-partial" {{ with .align }}align="{{ . }}"{{ end }}>
+  {{ if and $b (eq (or $b.position "after") "before") }}
+    <a class="banner" href="{{ $b.url | safeURL }}" target="_blank" rel="noopener"
+       aria-label="{{ $b.alt }}">
+      <img src="{{ $b.image | relURL }}" alt="{{ $b.alt }}" loading="lazy">
+    </a>
   {{ end }}
 
-  {{/* === SNS アイコン === */}}
   {{ range site.Params.socialIcons }}
     <a href="{{ trim .url " " | safeURL }}" target="_blank"
        rel="me noopener noreferrer"
@@ -23,13 +17,10 @@
     </a>
   {{ end }}
 
-  {{/* === バナー（後） === */}}
-  {{ with $b }}
-    {{ if ne (.position | default "after") "before" }}
-      <a class="profile-badge" href="{{ .url | safeURL }}" target="_blank" rel="noopener"
-         aria-label="{{ .alt }}">
-        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
-      </a>
-    {{ end }}
+  {{ if and $b (ne (or $b.position "after") "before") }}
+    <a class="banner" href="{{ $b.url | safeURL }}" target="_blank" rel="noopener"
+       aria-label="{{ $b.alt }}">
+      <img src="{{ $b.image | relURL }}" alt="{{ $b.alt }}" loading="lazy">
+    </a>
   {{ end }}
 </div>
