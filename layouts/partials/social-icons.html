@@ -1,9 +1,17 @@
-{{- $icons := site.Params.socialIcons -}}
-{{- $banner := site.Params.banner -}}
+{{/* 1) この partial は . に SNS アイコンの配列が入って来る */}}
+{{- $icons := . -}}
 
-{{ if or $icons $banner }}
+{{/* 2) ルートコンテキストから banner を取得（$.Site を明示） */}}
+{{- $banner := $.Site.Params.banner -}}
+
+{{/* 3) position は未設定でも落ちないように既定値 "after" を用意 */}}
+{{- $pos := "after" -}}
+{{- with $banner }}
+  {{- with .position }}{{ $pos = . }}{{ end -}}
+{{- end -}}
+
 <div class="social-icons">
-  {{- if and $banner (eq ($banner.position | default "after") "before") -}}
+  {{- if and $banner (eq $pos "before") -}}
     <a class="banner" href="{{ $banner.url }}" target="_blank" rel="noopener"
        aria-label="{{ $banner.alt }}">
       <img src="{{ $banner.image | relURL }}" alt="{{ $banner.alt }}" loading="lazy">
@@ -17,11 +25,10 @@
     </a>
   {{- end -}}
 
-  {{- if and $banner (ne ($banner.position | default "after") "before") -}}
+  {{- if and $banner (ne $pos "before") -}}
     <a class="banner" href="{{ $banner.url }}" target="_blank" rel="noopener"
        aria-label="{{ $banner.alt }}">
       <img src="{{ $banner.image | relURL }}" alt="{{ $banner.alt }}" loading="lazy">
     </a>
   {{- end -}}
 </div>
-{{- end }}
