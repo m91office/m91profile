@@ -5,9 +5,8 @@
   flex-wrap: wrap;
 }
 
-/* class 名を banner → profile-badge に変更 */
 .social-icons a.profile-badge img {
-  height: 28px;   /* 32px にすると少し大きめ */
+  height: 28px;  
   width: auto;
   vertical-align: middle;
   border-radius: 4px;
