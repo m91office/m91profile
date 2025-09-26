@@ -1,18 +1,18 @@
 .social-icons {
   display: flex;
   align-items: center;
-  gap: .8rem;      
-  flex-wrap: wrap;  
+  gap: .8rem;
+  flex-wrap: wrap;
 }
 
-.social-icons a.banner img {
-  height: 28px;    
+/* class 名を banner → profile-badge に変更 */
+.social-icons a.profile-badge img {
+  height: 28px;   /* 32px にすると少し大きめ */
   width: auto;
   vertical-align: middle;
-  border-radius: 4px;   
+  border-radius: 4px;
 }
 
-/* 横幅に余裕がある時は少し大きめでもOK */
 @media (min-width: 640px) {
-  .social-icons a.banner img { height: 32px; }
+  .social-icons a.profile-badge img { height: 32px; }
 }
