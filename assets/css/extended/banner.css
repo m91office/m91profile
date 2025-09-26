@@ -5,13 +5,13 @@
   flex-wrap: wrap;
 }
 
-.social-icons a.profile-badge img {
-  height: 28px;  
+.social-icons a.banner img {
+  height: 28px;
   width: auto;
   vertical-align: middle;
   border-radius: 4px;
 }
 
 @media (min-width: 640px) {
-  .social-icons a.profile-badge img { height: 32px; }
+  .social-icons a.banner img { height: 32px; }
 }
