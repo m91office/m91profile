@@ -30,7 +30,7 @@ hasCJKLanguage = true
 image = "/img/project-banner.png"  
 url   = "https://researchmap.jp/miho_1991" 
 alt   = "researchmap"           
-position = "after"  
+position = "before"  
 
 [[params.socialIcons]]
   name = "instagram"
