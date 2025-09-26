@@ -26,6 +26,19 @@ date: 2025-09-25
 岡山県「晴れの国33プログラム」検討委員（2014–2015）として、地域の健康寿命延伸施策の立案・評価に参画。日本公衆衛生看護学会国際委員会委員（2020–2022）として海外ネットワークや合同国際会議の連携を担当。第10回日本公衆衛生看護学会学術集会／6th GNPHN合同開催では実行委員・プログラム・講演集委員（2020–2022）を務め、企画調整と当日運営に従事。加えて、2017年開始の公衆衛生看護技術開発研究会「ワザケン」、2018年開始の保健師の学習会「すきっと保健師」を主宰（年4回）（ワザケン；2020-2025, すきっと保健師；2020-2025）し、学術と現場をつなぐ学びの場づくりに従事。
     
 ### リンク
-- researchmap: https://researchmap.jp/miho_1991
-- ORCID: https://orcid.org/0009-0006-6039-9625
+[params.banner]
+image = "/img/project-banner.png"  
+url   = "https://researchmap.jp/miho_1991" 
+alt   = "researchmap"           
+position = "before"  
+
+[languages.ja.params.banner]
+image = "/img/project-banner.png"
+url = "https://researchmap.jp/miho_1991"
+alt = "researchmap"
+position = "before"
+
+[[params.socialIcons]]
+  name = "orcid"
+  url  = "https://orcid.org/0009-0006-6039-9625"
 
