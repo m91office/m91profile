@@ -58,7 +58,6 @@ position = "before"
     [languages.ja.params.homeInfoParams]
       Title   = "田中美帆"
       Content = """大阪大学医学系研究科保健学専攻　助教  
-    Researchmap：https://researchmap.jp/miho_1991  
     J-GLOBAL ID：202001017457190707"""
    
     [languages.ja.menu]
