@@ -32,6 +32,12 @@ url   = "https://researchmap.jp/miho_1991"
 alt   = "researchmap"           
 position = "before"  
 
+[languages.ja.params.banner]
+image = "/img/project-banner.png"
+url = "https://researchmap.jp/miho_1991"
+alt = "researchmap"
+position = "before"
+
 [[params.socialIcons]]
   name = "instagram"
   url  = "https://www.instagram.com/m91office/"
