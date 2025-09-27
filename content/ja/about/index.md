@@ -7,9 +7,9 @@ date: 2025-09-25
 
 ### 田中 美帆
 **現在**  
-所属：大阪大学医学系研究科保健学専攻[Link](https://sahswww.med.osaka-u.ac.jp/jpn/index.html)  
-領域：総合ヘルスプロモーション科学講座  
-ゼミ：公衆衛生看護学教室[Link](https://plaza.umin.ac.jp/phnspace/index.html)
+所　属：大阪大学医学系研究科保健学専攻[Link](https://sahswww.med.osaka-u.ac.jp/jpn/index.html)  
+領　域：総合ヘルスプロモーション科学講座  
+研究室：公衆衛生看護学教室[Link](https://plaza.umin.ac.jp/phnspace/index.html)
 
 
 ### 学歴・職歴
