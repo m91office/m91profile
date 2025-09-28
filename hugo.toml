@@ -64,8 +64,7 @@ position = "before"
     [languages.ja.params.homeInfoParams]
       Title   = "田中美帆"
       Content = """大阪大学医学系研究科保健学専攻　助教  
-    研究の歩みも日々の気づきも発信中。  
-    下のアイコンから飛べます。"""
+    研究の歩みや日々の気づきも発信中、アイコンからどうぞ"""
    
     [languages.ja.menu]
       [[languages.ja.menu.main]]
