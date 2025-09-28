@@ -1,20 +1,54 @@
-<!-- Optional: Cloudflare Web Analytics (replace token) -->
-<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+{{- /* =========================================================
+     extend_head.html  — m91profile 用（多言語・構造化データ・検証タグ）
+     - hreflang: ja/en を相互リンク
+     - GSC: Google Search Console 検証タグ（必要時に有効化）
+     - Person の JSON-LD（日本語表記＋英語別名、ORCID/researchmap/SNS）
+     ========================================================= */ -}}
 
-<!-- JSON-LD Person (no email to avoid scraping; links to ORCID & researchmap) -->
+<!-- (任意) Google Search Console 所有権確認：発行コードを入れてコメント解除してください -->
+<!-- <meta name="google-site-verification" content="PASTE_YOUR_GSC_CODE" /> -->
+
+{{- /* ===== hreflang: 言語版の相互関連付け ===== */ -}}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+{{- range .Translations -}}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+{{- end -}}
+{{- if .IsHome -}}
+<link rel="alternate" hreflang="x-default" href="{{ "/" | absURL }}">
+{{- end -}}
+
+{{- /* ===== JSON-LD: 個人サイトはホームで Person を明示 ===== */ -}}
+{{- if .IsHome -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Miho Tanaka",
-  "affiliation": {"@type": "CollegeOrUniversity","name":"Osaka University Graduate School of Medicine, Division of Health Sciences"},
-  "url": "https://example.org/",
+  "@id": "{{ "/" | absURL }}#person",
+  "name": "田中 美帆",
+  "alternateName": ["Miho Tanaka"],
+  "jobTitle": "助教",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "大阪大学 医学系研究科 保健学専攻",
+    "alternateName": "Osaka University Graduate School of Medicine, Division of Health Sciences"
+  },
+  "url": "{{ "/" | absURL }}",
+  "image": "{{ "/uploads/portrait.jpg" | absURL }}",
   "sameAs": [
     "https://orcid.org/0009-0006-6039-9625",
-    "https://researchmap.jp/miho_1991"
+    "https://researchmap.jp/miho_1991",
+    "https://www.facebook.com/miho.phn",
+    "https://www.instagram.com/m91office/"
   ],
   "knowsAbout": [
-    "maternal and child health","public health nursing","parentality","primary prevention"
+    "母子保健", "公衆衛生看護", "親性", "一次予防",
+    "maternal and child health", "public health nursing", "parentality", "primary prevention"
   ]
 }
 </script>
+{{- end -}}
+
+<!-- (任意) Cloudflare Web Analytics：トークンを入れてコメント解除してください -->
+<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+     data-cf-beacon='{"token":"YOUR_CLOUDFLARE_TOKEN"}'></script> -->
+
