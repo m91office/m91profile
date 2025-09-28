@@ -75,14 +75,18 @@ position = "before"
         url = "/publications/"
         weight = 3
       [[languages.ja.menu.main]]
-        name = "ニュース"
-        url = "/news/"
+        name = "プロジェクト"
+        url = "/project/"
         weight = 4
       [[languages.ja.menu.main]]
         name = "連絡先"
         url = "/contact/"
         weight = 5
-
+      [[languages.ja.menu.main]]
+        name = "ニュース"
+        url = "/news/"
+        weight = 6
+        
   [languages.en]
     languageName = "English"
     weight = 2
