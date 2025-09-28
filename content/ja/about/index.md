@@ -7,9 +7,9 @@ date: 2025-09-25
 
 ### 田中 美帆
 **現在**  
-所　属：大阪大学医学系研究科保健学専攻　〔 [Link](https://sahswww.med.osaka-u.ac.jp/jpn/index.html) 〕  
+所　属：大阪大学医学系研究科保健学専攻〔[Link](https://sahswww.med.osaka-u.ac.jp/jpn/index.html)〕  
 領　域：総合ヘルスプロモーション科学講座  
-研究室：公衆衛生看護学教室　〔 [Link](https://plaza.umin.ac.jp/phnspace/index.html) 〕  
+研究室：公衆衛生看護学教室〔[Link](https://plaza.umin.ac.jp/phnspace/index.html)〕  
 
 ### 学歴・職歴
 岡山大学医学部保健学科看護学専攻卒（2014）、同大学院保健学研究科コミュニティヘルス看護学領域・博士前期課程修了、修士（看護学）（2016、修士論文題目「保健師学生のリフレクションの具体的様相～リフレクティブスキルを示す概念とその変化～」）。その後、堺市北保健センター保健師として地域保健に従事（2016-2020）し、2020年より大阪大学大学院保健学専攻助教。
