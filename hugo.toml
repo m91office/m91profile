@@ -65,7 +65,7 @@ position = "before"
       Title   = "田中美帆"
       Content = """大阪大学医学系研究科保健学専攻　助教  
     研究の歩みも日々の気づきも発信中。  
-    バナーやアイコンから飛べます。"""
+    下のアイコンから飛べます。"""
    
     [languages.ja.menu]
       [[languages.ja.menu.main]]
