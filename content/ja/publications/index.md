@@ -20,6 +20,4 @@ date: 2025-09-25
 - Reiko Okamoto, Masako Kageyama, Keiko Koide, Saori Iwamoto, Kayoko Goda, Misa Shiomi, Emiko Kusano, **Miho Tanaka**, Mai Tokimasa, Misaki Kiya Public health nursing art to enhance “strength of community” in Japan. Open Nursing Journal, 13(1), 177-185 2019年 doi:10.2174/1874434601913010177 〔[Link](https://opennursingjournal.com/VOLUME/13/PAGE/177/)〕
 - 岡本玲子, 小出恵子, 岩本里織, 合田加代子, 蔭山正子, 塩見美抄, 草野恵美子, 時政舞, **田中美帆** 公衆衛生看護が関わる地域の強みとは－文献の分析による概念化－. 日本公衆衛生看護学会誌 8(1), 12-22, 2019年4月 〔[Link](https://www.jstage.jst.go.jp/article/jjphn/8/1/8_12/_article/-char/ja/)〕
 - **田中美帆**, 岡本玲子, 小出恵子　保健師学生が日常生活実践中に記述したリフレクションの概念化－リフレクティブスキルの質評価に向けて－. 日本地域看護学会誌, 20(1), 22-30, 2017年3月 doi:10.20746/jachn.20.1_22 〔[Link](https://www.jstage.jst.go.jp/article/jachn/20/1/20_22/_article/-char/ja/)〕
-- 
-
 
