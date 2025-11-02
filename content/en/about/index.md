@@ -1,7 +1,7 @@
 ---
 title: "About"
 summary: "I love working as a public health nurse, strengthening community assets together with local residents."
-description: "Profile, research interests, and external profiles."
+description: "Profile"
 date: 2025-09-23
 ---
 
