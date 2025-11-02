@@ -14,7 +14,7 @@ Laboratory: Public Health Nursing Laboratory
 - B.S. in Nursing, Department of Health Sciences, Okayama University School of Medicine.
 - M.S. in Nursing, Graduate School of Health Sciences, Okayama University, Community Health Nursing Area.
   Master’s thesis: “Concrete Forms of Reflection among Public Health Nurse Students: Concepts that Indicate Reflective skills and Their Changes.”
-- Public health nurse in a government ordinance–designated city, engaged in community health (2016–2020).
+- Public health nurse in a government ordinance–designated city, engaged in community health.
 - Assistant Professor, Division of Health Sciences, Osaka University (2020–present).
   
 ### Practical Experience  
