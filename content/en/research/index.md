@@ -1,12 +1,14 @@
 ---
 title: "Research"
-description: "This research program focuses on public health nursing and the professional practice of public health nurses."
+description: "I aim to build a virtuous cycle of “evidence, competency, and professional” that drives primary prevention in public health nursing."
 date: 2025-09-23
 ---
 
-### Aims
-- To contribute to a society in which caregivers are adequately supported and children receive warm, responsive care (“**Parents resourced; children warmly held**”).
-- To advance the **methodological foundations of public health nursing** and the **competency development** of public health nurses.
+### Research Interests
+- **Evedence** Generating evidence that contributes to primary prevention
+- **Competency** Building public health nursing techniques that advance primary prevention
+- **Professional** Developing competencies for public health nurses who lead primary prevention
+  Primary application area: maternal and child health (parent–child health).
 
 ### Major Projects
 1. **Oya‑sei (Parentality) Balance Lab**  
