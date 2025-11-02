@@ -94,7 +94,7 @@ position = "before"
     contentDir = "content/en"
     [languages.en.params.homeInfoParams]
       Title = "Miho Tanaka"
-      Content = "Osaka University — Division of Health Sciences | Maternal & Child Health • Parentality • Primary Prevention"
+      Content = "Osaka University — Division of Health Sciences "
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "About"
