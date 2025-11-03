@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+  {{- /* ホームに出す対象：config の mainSections（= ["news"]） */ -}}
+  {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+
+  {{- /* ★ ホームだけ 1件にする */ -}}
+  {{- $paginator := .Paginate $pages 1 -}}
+
+  {{- /* PaperMod の「home info」(プロフィール欄) を1ページ目だけ出す */ -}}
+  {{- if and site.Params.homeInfoParams (eq $paginator.PageNumber 1) -}}
+    {{- partial "home_info.html" . -}}
+  {{- end -}}
+
+  {{- /* カード表示はテーマの summary を利用 → PaperMod の見た目のまま */ -}}
+  {{- range $paginator.Pages -}}
+    {{- .Render "summary" -}}
+  {{- end -}}
+
+  {{- /* ページ送りもテーマの部品を使用 */ -}}
+  {{- partial "pagination.html" . -}}
+
+{{ end }}
