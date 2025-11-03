@@ -26,7 +26,6 @@ enableRobotsTXT = true
   ShowReadingTime = false
   ShowBreadCrumbs = true
   defaultTheme = "auto"
-  mainSections = ["news"]
 
 [params.label]
   text = "Miho Tanaka"
