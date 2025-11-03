@@ -1,9 +1,30 @@
-{{- $paginator := .Paginate $pages }}
+{{ define "main" }}
 
-{{- if .IsHome -}}
-  {{- $.Scratch.Set "paginator" (.Paginate $pages 1) -}}  {{/* ← ホームは1件 */}}
-{{- else -}}
-  {{- $.Scratch.Set "paginator" (.Paginate $pages) -}}    {{/* ← それ以外は既定件数 */}}
-{{- end -}}
-{{- $paginator := $.Scratch.Get "paginator" -}}
+  {{/* PaperModの一覧の作り方に合わせて $pages を用意 */}}
+  {{- $pages := union .RegularPages .Sections -}}
+  {{- if .IsHome -}}
+    {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- end -}}
 
+  {{/* ★ ホームのときだけ 1件にする（.Paginate は一度だけ呼ぶ） */}}
+  {{- if .IsHome -}}
+    {{- $.Scratch.Set "paginator" (.Paginate $pages 1) -}}
+  {{- else -}}
+    {{- $.Scratch.Set "paginator" (.Paginate $pages) -}}
+  {{- end -}}
+  {{- $paginator := $.Scratch.Get "paginator" -}}
+
+  {{/* プロフィール欄（homeInfoParams）は1ページ目だけ表示 */}}
+  {{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) -}}
+    {{- partial "home_info.html" . -}}
+  {{- end -}}
+
+  {{/* 記事カード（テーマの summary をそのまま利用） */}}
+  {{- range $paginator.Pages -}}
+    {{- .Render "summary" -}}
+  {{- end -}}
+
+  {{/* ページ送り（テーマの部品） */}}
+  {{- partial "pagination.html" . -}}
+
+{{ end }}
