@@ -1,0 +1,12 @@
+{{- $pages := union .RegularPages .Sections }}
+{{- if .IsHome }}
+  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- end }}
+
+{{- if .IsHome -}}
+  {{- $.Scratch.Set "paginator" (.Paginate $pages 1) -}}   
+{{- else -}}
+  {{- $.Scratch.Set "paginator" (.Paginate $pages) -}}      
+{{- end -}}
+{{- $paginator := $.Scratch.Get "paginator" -}}
+
