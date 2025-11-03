@@ -1,12 +1,9 @@
-{{- $pages := union .RegularPages .Sections }}
-{{- if .IsHome }}
-  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- end }}
+{{- $paginator := .Paginate $pages }}
 
 {{- if .IsHome -}}
-  {{- $.Scratch.Set "paginator" (.Paginate $pages 1) -}}   
+  {{- $.Scratch.Set "paginator" (.Paginate $pages 1) -}}  {{/* ← ホームは1件 */}}
 {{- else -}}
-  {{- $.Scratch.Set "paginator" (.Paginate $pages) -}}      
+  {{- $.Scratch.Set "paginator" (.Paginate $pages) -}}    {{/* ← それ以外は既定件数 */}}
 {{- end -}}
 {{- $paginator := $.Scratch.Get "paginator" -}}
 
