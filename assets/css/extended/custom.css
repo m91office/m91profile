@@ -1,0 +1,13 @@
+/* ===== Miho Tanaka site - Soft Pink Theme ===== */
+
+:root {
+    --theme: #fff7fa;
+    --entry: #fffdfd;
+    --primary: #292126;
+    --secondary: #76676d;
+    --tertiary: #f8e9ee;
+    --content: #40363a;
+    --code-block-bg: #f8edf1;
+    --code-bg: #f8edf1;
+    --border: #f0dfe5;
+}
